@@ -1,5 +1,30 @@
+/*
+    Imports
+*/
+
+@font-face {
+    font-family: Hermes;
+    src: url("../fonts/Hermes-Regular.otf");
+}
+
+
+@font-face {
+    font-family: PraxoIo;
+    src: url("../fonts/praxo_io_regular.otf");
+}
+
+
+@font-face {
+    font-family: PraxoIo-Light;
+    src: url("../fonts/praxo_io_light.otf");
+}
+
+/*
+    Globals
+*/
+
 html {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -8,33 +33,34 @@ a {
 }
 
 body {
-    padding: 0;
     background-color: #1f1f1f;
     color: #fff;
+    padding: 0;
 }
 
 h1,
 h2 {
+    font-family: Hermes, Helvetica, Arial, sans-serif;
+    animation: color-fade 4s infinite;
+
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 
-h1 {
-    font-size: 42px;
-}
-
 h2 {
-    font-size: 32px;
+    text-shadow: -2px -2px #fff;
+    letter-spacing: 2px;
 }
 
 header nav {
     background-color: rgba(0, 0, 0, 0.85);
+
     display: block;
-    left: 0;
     position: fixed;
-    top: 0;
     width: 100%;
+    top: 0;
+    left: 0;
     z-index: 1;
 }
 
@@ -42,17 +68,15 @@ nav div li {
     float: left;
 }
 
-nav div li a {
-    display: block;
-    text-align: center;
-    padding: 16px;
-}
-
 nav ul {
     list-style-type: none;
     margin: 0;
     overflow: hidden;
 }
+
+/*
+    Tags
+*/
 
 #content {
     display: block;
@@ -63,45 +87,43 @@ nav ul {
     z-index: 0;
 }
 
-.grid {
-    display: flex;
+#title {
+    text-shadow: -3px -3px #e0a900;
 }
 
-.fl {
-    float: left;
+#sources {
+    color: #bbb;
 }
 
-.fr {
-    float: right:
+#subtitle {
+    text-shadow: 1px 1px 4px #000;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: -15px;
+    text-align: center;
 }
+
+/* 
+    Classes 
+*/
 
 .hero-image {
-    display: block;
     background-image: url("../images/edm.jpg");
     background-size: cover;
     background-position: center center;
-    height: 100vh;
-    left: 0;
+
+    display: block;
     position: absolute;
+    height: 100vh;
     top: 0;
+    left: 0;
     width: 100vw;
     z-index: 0;
 }
 
-.hero-image p {
-    padding-left: 10%;
-    padding-right: 10%;
-    text-align: center;
-}
-
-#sources {
-    font-size: 14px;
-    color: #bbb;
-}
-
-#title {
-    padding-top: 45vh;
-}
+/*
+    Utility Classes
+*/
 
 .img-fluid {
     align-self: center;
@@ -116,23 +138,200 @@ nav ul {
     padding-top: 15px;
 }
 
-.w-40 {
-    width: 40%;
+/*
+     Media Queries
+*/
+
+/* Mobile screens*/
+@media screen and (max-width: 1200px) {
+
+    nav div li a {
+        font-size: 18px;
+        text-align: center;
+
+        display: block;
+        padding: 6px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    #title {
+        overflow: hidden;
+        padding-top: 30vh;
+    }
+
+    #subtitle {
+        font-size: 20px;
+    }
+
+    #sources {
+        font-size: 18px;
+    }
+
+    /*
+         Utility Classes
+    */
+
+    .grid {
+        display: block;
+    }
+
+    .collapse-mobile {
+        display: none;
+    }
+
+    .show-mobile {
+        display: block
+    }
+
+    .w-40 {
+        width: 100%;
+    }
+
+    .w-50 {
+        width: 100%;
+    }
+
+    .w-60 {
+        width: 100%;
+    }
+
+    .w-60 p {
+        font-size: 18px;
+        font-weight: 200;
+        line-height: 24px;
+    }
 }
 
-.w-50 {
-    width: 50%;
+/* Deskop Screens */
+@media screen and (min-width: 1200px) {
+
+    nav div li a {
+        font-size: 20px;
+        text-align: center;
+
+        display: block;
+        padding: 16px;
+    }
+
+    h1 {
+        font-size: 110px;
+    }
+
+    h2 {
+        font-size: 42px;
+    }
+
+    #title {
+        padding-top: 35vh;
+    }
+
+    #subtitle {
+        font-size: 24px;
+    }
+
+    #sources {
+        font-size: 14px;
+    }
+
+    /*
+         Utility Classes
+    */
+
+    .grid {
+        display: flex;
+    }
+
+    .fl {
+        float: left;
+    }
+
+    .fr {
+        float: right:
+    }
+
+    .collapse-mobile {
+        display: block;
+    }
+
+    .show-mobile {
+        display: none
+    }
+
+    .w-40 {
+        width: 40%;
+    }
+
+    .w-50 {
+        width: 50%;
+    }
+
+    .w-60 {
+        width: 60%;
+    }
+
+    .w-60 p {
+        font-size: 18px;
+        font-weight: 200;
+        line-height: 24px;
+
+        min-height: 300px;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
 }
 
-.w-60 {
-    width: 60%;
-}
+/*
+    Animations
+*/
 
-.w-60 p {
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 24px;
-    min-height: 300px;
-    padding-left: 15%;
-    padding-right: 15%;
+@keyframes color-fade {
+    0% {
+        background: #f00;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    15% {
+        background: ;
+        background: #ff0;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    30% {
+        background: #0f0;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    45% {
+        background: #0ff;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    60% {
+        background: #00f;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    75% {
+        background: #f0f;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    100% {
+        background: #f00;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }

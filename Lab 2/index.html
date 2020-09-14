@@ -8,9 +8,10 @@
     <title>Lab 02</title>
     <meta name="description" content="DIG3174 Lab 02">
     <meta name="author" content="Miko Jimenez">
-    <meta name="viewport" content="width=device-width, inital-scale=1.0">
-
-<!--    <link rel="stylesheet" href="css/styles.css">-->
+    <meta name="viewport" content="width=device-width, inital-scale=1.0, minimum-scale=1">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
@@ -38,12 +39,17 @@
 
         <!-- Content Header-->
         <div class="hero-image">
+            <!-- Title -->
             <h1 id="title">Electronic Dance Music</h1>
-            <p>Electronic Dance Music, AKA EDM, is a collection of sub-genres that features high-energy, dancing music with electronic and synthesized sounds.</p>
+            
+            <!-- Subtitle -->
+            <p id="subtitle">Electronic Dance Music, AKA EDM, is a collection of sub-genres that features high-energy, dancing music with electronic and synthesized sounds.</p>
         </div>
     </header>
+    
+    <!-- Content Body-->
     <div id="content">
-        <!-- Content Body-->
+        <!-- Information -->
         <div id="#info" class="pad">
 
             <!-- #History -->
@@ -61,10 +67,14 @@
             <div id="influences" class="pad">
                 <h2>Influences</h2>
                 <div class="grid">
-                    <div class="fl w-40"><img src="images/jazz.jpg" alt="Image" class="img-fluid"></div>
+                    <!-- Hide on mobile -->
+                    <div class="fl w-40 collapse-mobile"><img src="images/jazz.jpg" alt="Image" class="img-fluid"></div>
                     <div class="fr w-60">
-                        <p>Disco, dub, hop-hop, and synth-pop are all considered to be precursors to electronic digital music. EDM has also taken influences from funk, soul, and smooth jazz. It takes the repetitive rhythms found within those genres and adds a twist of electronic sounds to what we know as EDM. Music is usually created with sampled audio and placed through synthesizers and beat makers to create EDM.</p> 
+                        <p>Disco, dub, hop-hop, and synth-pop are all considered to be precursors to electronic digital music. EDM has also taken influences from funk, soul, and smooth jazz. It takes the repetitive rhythms found within those genres and adds a twist of electronic sounds to what we know as EDM. Music is usually created with sampled audio and placed through synthesizers and beat makers to create EDM.</p>
                     </div>
+                    
+                    <!-- Show on mobile -->
+                    <div class="show-mobile"><img src="images/jazz.jpg" alt="Image" class="img-fluid"></div>
                 </div>
             </div>
 
@@ -80,38 +90,7 @@
             </div>
         </div>
 
-        <!--
-        <div class="pad">
-            <div>
-                <h2 id="listen">Listen</h2>
-                <p>Listen to some samples of EDM.</p>
-            </div>
-            <div>
-                <div>
-                    <img src="" alt="Card Image">
-                    <div>
-                        <h4>Techno</h4>
-                        <p>Lorem Ipsum</p>
-                    </div>
-                </div>
-                <div>
-                    <img src="" alt="Card Image">
-                    <div>
-                        <h4>Trance</h4>
-                        <p>Lorem Ipsum</p>
-                    </div>
-                </div>
-                <div>
-                    <img src="" alt="Card Image">
-                    <div>
-                        <h4>Electro House</h4>
-                        <p>Lorem Ipsum</p>
-                    </div>
-                </div>
-            </div>
-        </div>
--->
-
+        <!-- Sources -->
         <div id="sources" class="pad">
             <div class="grid">
                 <div class="w-50 fl">
@@ -144,4 +123,6 @@
             </div>
         </div>
     </div>
-</body></html>
+</body>
+
+</html>
