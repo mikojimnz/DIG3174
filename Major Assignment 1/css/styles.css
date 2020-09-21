@@ -2,25 +2,14 @@
     Imports
 */
 
+/* h1 and h2 font */
 @font-face {
     font-family: Hermes;
     src: url("../fonts/Hermes-Regular.otf");
 }
 
-
-@font-face {
-    font-family: PraxoIo;
-    src: url("../fonts/praxo_io_regular.otf");
-}
-
-
-@font-face {
-    font-family: PraxoIo-Light;
-    src: url("../fonts/praxo_io_light.otf");
-}
-
 /*
-    Globals
+    Elements
 */
 
 html {
@@ -53,6 +42,7 @@ h2 {
     letter-spacing: 2px;
 }
 
+/* Navbar background */
 header nav {
     background-color: rgba(0, 0, 0, 0.85);
 
@@ -68,6 +58,7 @@ nav div li {
     float: left;
 }
 
+/* Navbar horizontal links */
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -78,12 +69,27 @@ nav ul {
     Tags
 */
 
+/* Page content margins */
 #content {
     display: block;
     padding-left: 10%;
     padding-right: 10%;
     position: absolute;
     top: 110vh;
+    z-index: 0;
+}
+
+#hero-image {
+    background-image: url("../images/edm.jpg");
+    background-size: cover;
+    background-position: center center;
+
+    display: block;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100vw;
     z-index: 0;
 }
 
@@ -101,24 +107,6 @@ nav ul {
     padding-right: 10%;
     padding-top: -15px;
     text-align: center;
-}
-
-/* 
-    Classes 
-*/
-
-.hero-image {
-    background-image: url("../images/edm.jpg");
-    background-size: cover;
-    background-position: center center;
-
-    display: block;
-    position: absolute;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    z-index: 0;
 }
 
 /*
@@ -145,6 +133,10 @@ nav ul {
 /* Mobile screens*/
 @media screen and (max-width: 1200px) {
 
+    /*
+         Elements
+    */
+
     nav div li a {
         font-size: 18px;
         text-align: center;
@@ -160,6 +152,10 @@ nav ul {
     h2 {
         font-size: 32px;
     }
+
+    /*
+         Tags
+    */
 
     #title {
         overflow: hidden;
@@ -212,6 +208,10 @@ nav ul {
 /* Deskop Screens */
 @media screen and (min-width: 1200px) {
 
+    /*
+         Elements
+    */
+
     nav div li a {
         font-size: 20px;
         text-align: center;
@@ -227,6 +227,10 @@ nav ul {
     h2 {
         font-size: 42px;
     }
+
+    /*
+         Tags
+    */
 
     #title {
         padding-top: 35vh;
