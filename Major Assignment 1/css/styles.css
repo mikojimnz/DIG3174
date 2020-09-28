@@ -39,7 +39,6 @@ h2 {
 }
 
 h2 {
-/*    text-shadow: -2px -2px #fff;*/
     letter-spacing: 2px;
 }
 
@@ -55,6 +54,7 @@ header nav {
     z-index: 1;
 }
 
+/* Align navbar items */
 nav div li {
     float: left;
 }
@@ -80,6 +80,7 @@ nav ul {
     z-index: 0;
 }
 
+/* splash image */
 #hero-image {
     background-image: url("../images/edm.jpg");
     background-size: cover;
@@ -114,6 +115,7 @@ nav ul {
     Utility Classes
 */
 
+/* Auto resize images */
 .img-fluid {
     align-self: center;
     display: block;
@@ -121,6 +123,7 @@ nav ul {
     width: 100%
 }
 
+/* Add padding to page sections */
 .pad {
     display: block;
     padding-bottom: 15px;
