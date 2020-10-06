@@ -1,0 +1,58 @@
+/*imports normalize*/
+@import "normalize.css";
+
+/* Mobile Media Query */
+@media screen and (max-width: 500px) {
+
+    /* Create Grid */
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto;
+
+        padding-left: 5%;
+        padding-right: 5%;
+
+    }
+
+    /* Define Grid Item */
+    .grid-item {
+        background: #fff1b4;
+        box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.35);
+
+        padding: 10px;
+        margin: 10px;
+    }
+
+    /* Wide items */
+    .wide {
+        background: #d7ffcb;
+        grid-column: 1 / span 2;
+
+    }
+
+    /* Long items */
+    .long {
+        background: #b4b4ff;
+
+        grid-row: 2 / span 2;
+    }
+    
+    /* Add body color*/
+    body {
+        background-color: #cbffed;
+    }
+    
+    /* Format Title */
+    h1 {
+        font-family: sans-serif;
+        text-align: center;
+    }
+
+    /* Center images */
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        width: 100%;
+    }
