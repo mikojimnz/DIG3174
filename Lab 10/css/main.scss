@@ -1,0 +1,11 @@
+//imports mixins to this scss file
+@import "variables";
+@import "mixins";
+
+// Set global height for divs
+div {
+    height: $divHeight;
+}
+
+// run the gradient mixin
+@include gradient;

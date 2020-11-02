@@ -1,0 +1,26 @@
+// Gradient Mixin
+@mixin gradient {
+    
+    // Loop through number of rows specified
+    @for $i from 1 through $rows {
+        
+        // Target child divs of #container
+        #container > div:nth-child(#{$i}) {
+            
+            // Determine if row is even
+            @if $i % 2==0 {
+                
+                // Change the background color based on the row and factor
+                background-color: rgb(0 + ($i * $factor), 255 - ($i * $factor), 255 - ($i * $factor));
+            }
+
+            // Otherwise its odd
+            @else {
+                
+                // Change the background color based on the row and factor
+                background-color: rgb(255 - ($i * $factor), 0 + ($i * $factor), 255 - ($i * $factor));
+            }
+
+        }
+    }
+}
