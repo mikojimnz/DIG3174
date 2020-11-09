@@ -1,0 +1,50 @@
+// Define color variables
+$textColor: #fff;
+$bgColor: #e0a900;
+
+// Style paragraph elements
+p {
+    color: $textColor;
+    padding: 5px;
+}
+
+// Style grid items
+.grid-item {
+    background-color: $bgColor + #202020;
+}
+
+// Style large grid item
+.lgSquare {
+    background-color: $bgColor;
+}
+
+
+// Style wide grid item
+.wide {
+    background-color: $bgColor;
+}
+
+// Style wide grid paragraph
+.wide > p {
+    text-align: center;
+}
+
+// Style long grid item
+.long {
+    background-color: $bgColor;
+}
+
+// Style long grid item paragraph
+.long > p {
+    text-align: right;
+}
+
+// Style fixed grid item
+.fixed {
+    background-color: $bgColor;
+}
+
+// Style fixed grid item paragraph
+.fixed > p {
+    text-align: center;
+}
