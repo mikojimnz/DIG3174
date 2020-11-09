@@ -1,0 +1,21 @@
+@font-face {
+    font-family: myFont;
+    src: url(Funtauna-f7SSge0Miz.otf);
+}
+
+body {
+    font-family: myFont;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10vh;
+}
+
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+p {
+    font-size: 1.5em;
+}
