@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Lab 12</title>
+    <meta name="description" content="Lab 12">
+    <meta name="author" content="Miko Jimenez">
+
+</head>
+
+<body>
+    <!-- No Elements -->
+</body>
+<!-- JavaScript -->
+<script>
+    // Initialize document elements
+    function init() {
+        // Initialize new elements
+        let label = document.createElement("p");
+        let button = document.createElement("button");
+
+        // Change attributes of label
+        label.setAttribute("id", "label");
+        label.innerHTML = "This a javascript generated paragraph element.";
+        
+        // Change attributes of button
+        button.setAttribute("id", "button");
+        button.setAttribute("type", "button");
+        button.innerHTML = " Click Me! ";
+        
+        // Append elements to body
+        document.body.append(label);
+        document.body.append(button);
+    }
+
+    // Register page events to elements
+    function registerEvents() {
+        // Create click event listenr for button
+        document.getElementById("button").addEventListener("click", modify, false);
+    }
+    
+    // Change page state
+    function modify() {
+        // Initalize target elements
+        var target = document.getElementById("label");
+        var button = document.getElementById("button");
+        
+        // Modify element styling
+        target.innerHTML = "This element has been changed";
+        target.style.fontSize = "30px";
+        target.style.textDecoration = "underline";
+        target.style.color = "white";
+        target.style.textAlign = "center";
+        target.style.marginLeft = "auto";
+        target.style.marginRight = "auto";
+        target.style.paddingTop = "40vh";
+        
+        // Modify body
+        document.body.style.backgroundColor = "black";
+        document.body.removeChild(button);
+    }
+    
+    // Wait for page load event
+    window.onload = function() {
+        "use strict";
+        init();
+        registerEvents();
+    }
+
+</script>
+</html>
