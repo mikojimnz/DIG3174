@@ -1,0 +1,33 @@
+// Create rounded corners
+@mixin roundCorners($topOnly: false) {
+
+    @if $topOnly {
+        border-radius: $borderRadius $borderRadius 0 0;
+    }
+
+    @else {
+        border-radius: $borderRadius;
+    }
+
+}
+
+
+// Calculate padding
+@mixin cardHeroPad {
+    padding: $cardHeroPad * -1;
+    margin: $cardHeroPad * -1;
+}
+
+// Define mobile media query
+@mixin for-mobile-only {
+    @media screen and (max-width: $mobileBreakpoint - 1) {
+        @content;
+    }
+}
+
+// Define tablet media query
+@mixin for-tablet-only {
+    @media screen and (min-width: $mobileBreakpoint) and (max-width: $tabletBreakpoint) {
+        @content;
+    }
+}

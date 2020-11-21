@@ -1,0 +1,174 @@
+/* Create grid template */
+.grid {
+    border-top: 2px solid #fff;
+
+    display: grid;
+    grid-auto-columns: auto;
+    grid-template-rows: auto;
+    grid-column-gap: 100px;
+    width: 100%;
+    
+    padding-right: 150px;
+}
+
+
+/* Grid padding */
+.grid-container {
+    padding-top: 5%;
+
+    position: absolute;
+    left: 30%;
+}
+
+/* Pad grid items */
+.grid-item {
+    display: block;
+    
+    grid-row-start: 1;
+    grid-row-end: 2;
+    
+    height: auto;
+    width: 400px;
+    
+    padding-top: 30px;
+    margin-bottom: 10%;
+}
+
+/* Stylize inner grid item */
+.item-inner {
+    background-color: $gridItemColor;
+    @include roundCorners();
+    box-shadow: 3px 3px 2px #000;
+
+    padding: 25px;
+}
+
+
+/* Stylize card hero image */
+.item-inner > img {
+    @include roundCorners(true);
+    height: auto;
+    width: 400px;
+    
+    // Fit to parent
+    @include cardHeroPad;
+}
+
+/* Stylize card hero iframe */
+.item-inner > iframe {
+    @include roundCorners(true);
+    height: 200px;
+    width: 400px;
+    
+    // Fit to parent
+    @include cardHeroPad;
+}
+
+/* Stylize card title */
+.item-inner > h1 {
+    color: $accentFontColor;
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    margin: 0;
+}
+
+/* Stylize card subtitle */
+.item-inner > h2 {
+    font-size: 20px;
+    font-weight: 200;
+
+    margin: 0;
+}
+
+/* Stylize card date */
+.item-inner > h3 {
+    font-weight: 500;
+
+    margin: 0;
+    padding-top: 30px;
+}
+
+/* Stylize end tag */
+.timeline-end-horz {
+    color: $accentFontColor;
+    display: inline-block;
+    float: right;
+    padding-right: 25px;
+}
+
+/* Hide vertical end tag */
+.timeline-end-ver {
+    display: none;
+}
+
+/*
+     Media Queries
+*/
+
+/* Mobile Screens */
+@include for-mobile-only {
+    .grid {
+        border-top: none;
+        border-left: 2px solid #fff;
+        
+        grid-template-rows: auto;
+        grid-row-gap: 100px;
+        
+        padding-right: 0;
+        
+        height: 100%;
+        width: 95vw;
+    }
+
+    .grid-container {
+        left: 5%;
+    }
+
+    .grid-item {
+        display: block;
+        
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: auto;
+        
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 15px;
+
+        height: auto;
+        width: 85vw;
+    }
+
+    .item-inner > img {
+        width: 85vw;
+    }
+
+    .item-inner > iframe {
+        height: 350px;
+        width: 85vw;
+    }
+
+
+    .timeline-end-horz {
+        display: none;
+    }
+
+    .timeline-end-ver {
+        color: $accentFontColor;
+        display: inline-block;
+        float: left;
+    }
+}
+
+/* Deskop Screens */
+/* Tablet/Medium Screens */
+@include for-tablet-only {
+    .grid {
+        padding-right: 0;
+        
+        width: 600vw;
+    }
+
+}
